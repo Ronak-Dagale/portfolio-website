@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+
+
+// for changing color ******************************
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,6 +17,12 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+    },
+    // for changing color ******************************
+    colors: {
+      ...colors,
+      primary: colors.yellow,
+      secondary: colors.green,
     },
   },
   plugins: [],
